@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="container">
+    <h1 class="text-center">GOOD MORNING</h1>
+</div> <br>
+<div class="container px-4">
+    <div class="row gx-5">
+      <div class="col p-3 border bg-light text-center">
+       <div class="p-3 border bg-light">
+        <b>MAZHARUL HOQUE</b>
+        <P>ID: 201-15-14157<br>SECTION: PC-B</P>
+       </div>
+      </div>
+      <div class="col p-3 border bg-light text-center">
+        <div class="p-3 border bg-light">
+            <b>RAFIN Ahammed</b>
+            <P>ID: 202-15-3829<br>SECTION: PC-B</P>
+        </div>
+      </div>
+    </div>
+  </div> <br>
+
+  <div class="container">
+    <h3 class="text-center">Contact Us</h3>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input name="name" class="form-control" placeholder="Pallab">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+            <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div>
+            <input class="btn btn-primary" type="submit" value="Submit">
+        </div>
+    </form>
+    
+  </div>
+{% endblock %}
